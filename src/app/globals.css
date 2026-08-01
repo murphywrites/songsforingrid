@@ -60,15 +60,6 @@ body {
   }
 }
 
-@keyframes knot-draw {
-  from {
-    stroke-dashoffset: 240;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes soft-glow {
   0%,
   100% {
@@ -95,13 +86,21 @@ body {
   animation: fade-up 0.9s ease-out 0.45s both;
 }
 
-.animate-knot {
-  stroke-dasharray: 240;
-  animation: knot-draw 2.4s ease-out both;
-}
-
 .animate-glow {
   animation: soft-glow 6s ease-in-out infinite;
+}
+
+/* Interlaced Celtic knot divider — mask so currentColor tints the ribbon */
+.celtic-divider {
+  background-color: currentColor;
+  -webkit-mask-image: url("/ornaments/celtic-divider.png");
+  mask-image: url("/ornaments/celtic-divider.png");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -113,7 +112,6 @@ body {
   .animate-fade-up-delay-1,
   .animate-fade-up-delay-2,
   .animate-fade-up-delay-3,
-  .animate-knot,
   .animate-glow {
     animation: none;
   }

@@ -5,28 +5,18 @@ type CelticKnotProps = {
   variant?: "divider" | "corner" | "frame";
 };
 
+/**
+ * Horizontal Celtic knot divider — interlaced linear knotwork
+ * (geometry after AnonMoos / Wikimedia Commons, public domain).
+ * Colored via `currentColor` (default gold).
+ */
 export function CelticKnotDivider({ className = "" }: { className?: string }) {
   return (
-    <svg
-      className={`mx-auto h-8 w-48 text-gold ${className}`}
-      viewBox="0 0 200 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      className={`celtic-divider mx-auto h-11 w-64 text-gold sm:h-12 sm:w-72 ${className}`}
+      role="presentation"
       aria-hidden="true"
-    >
-      <path
-        className="animate-knot"
-        d="M10 16 C20 4, 30 4, 40 16 C50 28, 60 28, 70 16 C80 4, 90 4, 100 16 C110 28, 120 28, 130 16 C140 4, 150 4, 160 16 C170 28, 180 28, 190 16"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <circle cx="100" cy="16" r="5" fill="currentColor" opacity="0.85" />
-      <path
-        d="M88 16 L94 10 L100 16 L94 22 Z M106 10 L112 16 L106 22 L100 16 Z"
-        fill="currentColor"
-        opacity="0.7"
-      />
-    </svg>
+    />
   );
 }
 
@@ -51,22 +41,38 @@ export function CelticCorner({
       aria-hidden="true"
       style={{ transform: `scale(${scaleX}, ${scaleY})` }}
     >
+      {/* Double L-band */}
       <path
-        d="M8 48 V18 C8 10, 10 8, 18 8 H48"
+        d="M8 48 V18 C8 9 9 8 18 8 H48"
         stroke="currentColor"
         strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <path
-        d="M16 40 V22 C16 18, 18 16, 22 16 H40"
+        d="M15 41 V22 C15 17 17 15 22 15 H41"
         stroke="currentColor"
-        strokeWidth="1.25"
-        opacity="0.75"
+        strokeWidth="1.2"
+        opacity="0.7"
+        strokeLinecap="round"
       />
-      <circle cx="14" cy="14" r="3" fill="currentColor" />
+      {/* Irish spiral terminal */}
       <path
-        d="M22 8 C26 12, 30 12, 34 8 M8 22 C12 26, 12 30, 8 34"
+        d="M22 8
+           C28 8 31 12 29 16
+           C27.5 19 24 18.5 24 16
+           C24 14.5 25.5 13.5 27 14"
         stroke="currentColor"
-        strokeWidth="1.25"
+        strokeWidth="1.35"
+        strokeLinecap="round"
+      />
+      <path
+        d="M8 22
+           C8 28 12 31 16 29
+           C19 27.5 18.5 24 16 24
+           C14.5 24 13.5 25.5 14 27"
+        stroke="currentColor"
+        strokeWidth="1.35"
+        strokeLinecap="round"
       />
     </svg>
   );
