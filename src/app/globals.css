@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --forest: #1a3c2a;
+  --forest-deep: #0f2419;
+  --forest-mid: #2d5a3f;
+  --forest-soft: #3d6b4f;
+  --gold: #c4a035;
+  --gold-bright: #e0c15a;
+  --gold-muted: #a6862e;
+  --mist: #e8efe9;
+  --mist-deep: #d4e0d6;
+  --parchment: #f3f6f2;
+  --ink: #142018;
+  --background: var(--parchment);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-forest: var(--forest);
+  --color-forest-deep: var(--forest-deep);
+  --color-forest-mid: var(--forest-mid);
+  --color-forest-soft: var(--forest-soft);
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-muted: var(--gold-muted);
+  --color-mist: var(--mist);
+  --color-mist-deep: var(--mist-deep);
+  --color-parchment: var(--parchment);
+  --color-ink: var(--ink);
+  --font-display: var(--font-uncial);
+  --font-body: var(--font-garamond);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-garamond), Georgia, serif;
+}
+
+::selection {
+  background: var(--forest);
+  color: var(--gold-bright);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes knot-draw {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes soft-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fade-up 0.9s ease-out 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.9s ease-out 0.3s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fade-up 0.9s ease-out 0.45s both;
+}
+
+.animate-knot {
+  stroke-dasharray: 240;
+  animation: knot-draw 2.4s ease-out both;
+}
+
+.animate-glow {
+  animation: soft-glow 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-fade-up-delay-1,
+  .animate-fade-up-delay-2,
+  .animate-fade-up-delay-3,
+  .animate-knot,
+  .animate-glow {
+    animation: none;
+  }
+}
