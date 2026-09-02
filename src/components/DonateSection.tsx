@@ -10,6 +10,14 @@ const methods = [
     disabled: false,
   },
   {
+    name: "Zelle",
+    detail: "songsforingrid@gmail.com",
+    note: "Open your banking app’s Zelle feature, send to songsforingrid@gmail.com, and include a short note if you’d like. Most banks offer Zelle at no fee.",
+    cta: null,
+    href: null,
+    disabled: true,
+  },
+  {
     name: "Check / Mail",
     detail: "Payable to: Ingrid Murphy Foundation",
     note: "Mail to:\n3601 W 97th St.\nEvergreen Park, IL 60805",
@@ -20,7 +28,7 @@ const methods = [
   {
     name: "Credit Card",
     detail: "Secure online donations",
-    note: "Card donations are coming soon. In the meantime, Venmo or a mailed check are the best ways to give.",
+    note: "Card donations are coming soon. In the meantime, Venmo, Zelle, or a mailed check are the best ways to give.",
     cta: "Coming Soon",
     href: null,
     disabled: true,
@@ -46,7 +54,7 @@ export function DonateSection() {
           Choose the way that works best for you.
         </p>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {methods.map((method) => (
             <CelticFrame key={method.name} className="text-left">
               <h3 className="font-display text-xl text-forest">{method.name}</h3>
