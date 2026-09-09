@@ -19,7 +19,7 @@ const garamond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Songs for Ingrid | Dr. Murphy's Band",
   description:
-    "Songs for Ingrid — Irish folk from Chicago by Dr. Murphy's Band. Stream the album, get the CD, and support Ingrid's special needs trust.",
+    "Songs for Ingrid — Irish folk from Chicago by Dr. Murphy's Band. Stream or buy the digital album on Bandcamp, get the CD, and support Ingrid's special needs trust.",
 };
 
 export default function RootLayout({

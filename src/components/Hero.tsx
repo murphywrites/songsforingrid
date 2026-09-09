@@ -1,5 +1,6 @@
 import { BandLogo } from "@/components/BandLogo";
 import { CelticKnotDivider } from "@/components/CelticKnot";
+import { BANDCAMP_ALBUM_URL } from "@/lib/links";
 
 export function Hero() {
   return (
@@ -30,7 +31,7 @@ export function Hero() {
             Listen
           </a>
           <a href="#cd" className="transition hover:text-gold-bright">
-            CD
+            Buy
           </a>
           <a href="#donate" className="transition hover:text-gold-bright">
             Give
@@ -55,8 +56,16 @@ export function Hero() {
 
         <div className="animate-fade-up-delay-3 mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="#listen"
+            href={BANDCAMP_ALBUM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="border border-gold bg-gold px-7 py-3 font-display text-sm tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
+          >
+            Buy Digital Album
+          </a>
+          <a
+            href="#listen"
+            className="border border-gold/70 px-7 py-3 font-display text-sm tracking-wider text-gold-bright uppercase transition hover:border-gold-bright hover:bg-white/5"
           >
             Listen Now
           </a>

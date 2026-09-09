@@ -1,4 +1,5 @@
 import { CelticFrame, CelticKnotDivider } from "@/components/CelticKnot";
+import { BANDCAMP_ALBUM_URL } from "@/lib/links";
 
 export function CdSection() {
   return (
@@ -17,39 +18,66 @@ export function CdSection() {
 
       <div className="relative mx-auto max-w-3xl text-center">
         <p className="font-display text-sm tracking-[0.3em] text-gold uppercase">
-          Physical release
+          Own the album
         </p>
         <h2 className="mt-3 font-display text-3xl text-gold-bright sm:text-4xl">
-          Get the CD
+          Get Songs for Ingrid
         </h2>
         <CelticKnotDivider className="my-6" />
         <p className="mx-auto max-w-lg text-lg text-mist/85">
-          Own a copy of <em>Songs for Ingrid</em> — compact disc sales and
-          shipping details will appear here.
+          The digital album is available now on Bandcamp. Compact disc sales
+          and shipping details will appear here.
         </p>
 
-        <CelticFrame className="mt-12">
-          <div className="space-y-6 text-center">
-            <div>
-              <p className="font-display text-2xl text-gold-bright">
-                Songs for Ingrid — CD
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          <CelticFrame>
+            <div className="space-y-6 text-center">
+              <div>
+                <p className="font-display text-2xl text-gold-bright">
+                  Digital album
+                </p>
+                <p className="mt-2 text-mist/70">$10 on Bandcamp</p>
+              </div>
+
+              <a
+                href={BANDCAMP_ALBUM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full border border-gold bg-gold px-6 py-3 font-display text-sm tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
+              >
+                Buy Digital Album
+              </a>
+
+              <p className="text-sm text-mist/55">
+                Streaming + download. All proceeds benefit The Ingrid Murphy
+                Foundation.
               </p>
-              <p className="mt-2 text-mist/70">Price &amp; shipping TBD</p>
             </div>
+          </CelticFrame>
 
-            <button
-              type="button"
-              disabled
-              className="w-full border border-gold/50 bg-gold/10 px-6 py-3 font-display text-sm tracking-wider text-gold-bright uppercase opacity-80 sm:w-auto"
-            >
-              Buy CD — Coming Soon
-            </button>
+          <CelticFrame>
+            <div className="space-y-6 text-center">
+              <div>
+                <p className="font-display text-2xl text-gold-bright">
+                  Songs for Ingrid — CD
+                </p>
+                <p className="mt-2 text-mist/70">Price &amp; shipping TBD</p>
+              </div>
 
-            <p className="text-sm text-mist/55">
-              Placeholder checkout — Stripe / PayPal storefront to be connected.
-            </p>
-          </div>
-        </CelticFrame>
+              <button
+                type="button"
+                disabled
+                className="w-full border border-gold/50 bg-gold/10 px-6 py-3 font-display text-sm tracking-wider text-gold-bright uppercase opacity-80"
+              >
+                Buy CD — Coming Soon
+              </button>
+
+              <p className="text-sm text-mist/55">
+                Physical checkout — Stripe / PayPal storefront to be connected.
+              </p>
+            </div>
+          </CelticFrame>
+        </div>
       </div>
     </section>
   );
