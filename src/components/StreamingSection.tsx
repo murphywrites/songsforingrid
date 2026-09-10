@@ -1,16 +1,35 @@
 import { CelticFrame, CelticKnotDivider } from "@/components/CelticKnot";
-import { BANDCAMP_ALBUM_URL } from "@/lib/links";
+import {
+  BANDCAMP_ALBUM_URL,
+  SHOW_STREAMING_PLATFORMS,
+} from "@/lib/links";
 
-const platforms = [
-  { name: "Spotify", href: null, label: "Stream on Spotify" },
-  { name: "Apple Music", href: null, label: "Stream on Apple Music" },
-  { name: "YouTube Music", href: null, label: "Watch on YouTube" },
+const bandcamp = {
+  name: "Bandcamp",
+  href: BANDCAMP_ALBUM_URL,
+  label: "Sample and buy on Bandcamp",
+  cta: "Sample & buy →",
+};
+
+const upcomingPlatforms = [
+  { name: "Spotify", href: null, label: "Stream on Spotify", cta: "Coming soon →" },
   {
-    name: "Bandcamp",
-    href: BANDCAMP_ALBUM_URL,
-    label: "Listen and buy on Bandcamp",
+    name: "Apple Music",
+    href: null,
+    label: "Stream on Apple Music",
+    cta: "Coming soon →",
+  },
+  {
+    name: "YouTube Music",
+    href: null,
+    label: "Watch on YouTube",
+    cta: "Coming soon →",
   },
 ];
+
+const platforms = SHOW_STREAMING_PLATFORMS
+  ? [bandcamp, ...upcomingPlatforms]
+  : [bandcamp];
 
 export function StreamingSection() {
   return (
@@ -27,8 +46,9 @@ export function StreamingSection() {
         </h2>
         <CelticKnotDivider className="my-6 text-forest-soft" />
         <p className="mx-auto max-w-lg text-lg text-ink/75">
-          Stream or buy the digital album on Bandcamp now. Other platforms
-          will appear here as they go live.
+          {SHOW_STREAMING_PLATFORMS
+            ? "Start with Bandcamp to sample tracks or buy the digital album. Other platforms will appear here as they go live."
+            : "Sample tracks or buy the digital album on Bandcamp."}
         </p>
 
         <CelticFrame className="mt-12 text-left">
@@ -47,7 +67,7 @@ export function StreamingSection() {
                       {platform.name}
                     </span>
                     <span className="text-sm tracking-wide text-gold-muted group-hover:text-gold">
-                      Listen &amp; buy →
+                      {platform.cta}
                     </span>
                   </a>
                 ) : (
@@ -59,7 +79,7 @@ export function StreamingSection() {
                       {platform.name}
                     </span>
                     <span className="text-sm tracking-wide text-gold-muted">
-                      Coming soon →
+                      {platform.cta}
                     </span>
                   </span>
                 )}

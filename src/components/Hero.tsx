@@ -56,24 +56,27 @@ export function Hero() {
 
         <div className="animate-fade-up-delay-3 mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
-            href={BANDCAMP_ALBUM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-gold bg-gold px-7 py-3 font-display text-sm tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
-          >
-            Buy Digital Album
-          </a>
-          <a
             href="#listen"
             className="border border-gold/70 px-7 py-3 font-display text-sm tracking-wider text-gold-bright uppercase transition hover:border-gold-bright hover:bg-white/5"
           >
             Listen Now
           </a>
           <a
+            href={BANDCAMP_ALBUM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-gold bg-gold px-7 py-3 text-center font-display text-sm leading-snug tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
+          >
+            Sample Music
+            <span className="block font-body text-[0.7rem] normal-case tracking-normal text-forest-deep/80">
+              and/or Buy Digital CD
+            </span>
+          </a>
+          <a
             href="#donate"
             className="border border-gold/70 px-7 py-3 font-display text-sm tracking-wider text-gold-bright uppercase transition hover:border-gold-bright hover:bg-white/5"
           >
-            Support Ingrid
+            Make a Donation
           </a>
         </div>
       </div>

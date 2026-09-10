@@ -25,8 +25,8 @@ export function CdSection() {
         </h2>
         <CelticKnotDivider className="my-6" />
         <p className="mx-auto max-w-lg text-lg text-mist/85">
-          The digital album is available now on Bandcamp. Compact disc sales
-          and shipping details will appear here.
+          Sample tracks or buy the digital album on Bandcamp. Physical CDs are
+          $20 including shipping.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -43,14 +43,17 @@ export function CdSection() {
                 href={BANDCAMP_ALBUM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block w-full border border-gold bg-gold px-6 py-3 font-display text-sm tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
+                className="inline-block w-full border border-gold bg-gold px-6 py-3 text-center font-display text-sm leading-snug tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
               >
-                Buy Digital Album
+                Sample Music
+                <span className="mt-1 block font-body text-[0.7rem] normal-case tracking-normal text-forest-deep/80">
+                  and/or Buy Digital CD
+                </span>
               </a>
 
               <p className="text-sm text-mist/55">
-                Streaming + download. All proceeds benefit The Ingrid Murphy
-                Foundation.
+                Preview songs free on Bandcamp, then buy if you like. Streaming
+                + download. All proceeds benefit The Ingrid Murphy Foundation.
               </p>
             </div>
           </CelticFrame>
@@ -61,7 +64,7 @@ export function CdSection() {
                 <p className="font-display text-2xl text-gold-bright">
                   Songs for Ingrid — CD
                 </p>
-                <p className="mt-2 text-mist/70">Price &amp; shipping TBD</p>
+                <p className="mt-2 text-mist/70">$20 including shipping</p>
               </div>
 
               <button
@@ -73,7 +76,8 @@ export function CdSection() {
               </button>
 
               <p className="text-sm text-mist/55">
-                Physical checkout — Stripe / PayPal storefront to be connected.
+                Physical discs are on the way. Checkout will open here once
+                they arrive.
               </p>
             </div>
           </CelticFrame>
