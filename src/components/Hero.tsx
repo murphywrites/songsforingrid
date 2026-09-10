@@ -51,25 +51,19 @@ export function Hero() {
         </h1>
 
         <p className="animate-fade-up-delay-2 mt-4 max-w-md text-lg text-mist/90 sm:text-xl">
-          Irish folk from Chicago — an album of love, memory, and melody.
+          Dr. Murphy&apos;s Band presents Songs For Ingrid — a heartfelt collection of Irish folk tunes for one special little girl.
         </p>
 
         <div className="animate-fade-up-delay-3 mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#listen"
-            className="border border-gold/70 px-7 py-3 font-display text-sm tracking-wider text-gold-bright uppercase transition hover:border-gold-bright hover:bg-white/5"
-          >
-            Listen Now
-          </a>
           <a
             href={BANDCAMP_ALBUM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="border border-gold bg-gold px-7 py-3 text-center font-display text-sm leading-snug tracking-wider text-forest-deep uppercase transition hover:bg-gold-bright"
           >
-            Sample Music
+            Listen
             <span className="block font-body text-[0.7rem] normal-case tracking-normal text-forest-deep/80">
-              and/or Buy Digital CD
+              and/or Buy Digital Album
             </span>
           </a>
           <a
