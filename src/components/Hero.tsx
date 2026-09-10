@@ -27,6 +27,9 @@ export function Hero() {
           Dr. Murphy&apos;s Band
         </p>
         <div className="flex gap-5 text-sm text-mist/80">
+          <a href="#event" className="transition hover:text-gold-bright">
+            Event
+          </a>
           <a href="#listen" className="transition hover:text-gold-bright">
             Listen
           </a>

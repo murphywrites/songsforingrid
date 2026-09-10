@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { EventSection } from "@/components/EventSection";
 import { StreamingSection } from "@/components/StreamingSection";
 import { CdSection } from "@/components/CdSection";
 import { DonateSection } from "@/components/DonateSection";
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <main className="flex-1">
       <Hero />
+      <EventSection />
       <StreamingSection />
       <CdSection />
       <DonateSection />
